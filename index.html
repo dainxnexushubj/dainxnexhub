@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D.A.I.N.X NEXUS | RANGER</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main>
+    <h1>D.A.I.N.X NEXUS</h1>
+    <h2>RANGER</h2>
+
+    <section>
+      <p>
+        Status:
+        <strong id="ranger-status">CONNECTING</strong>
+      </p>
+    </section>
+
+    <section>
+      <form id="ranger-form">
+        <label for="mission-input">Mission Objective</label>
+
+        <textarea
+          id="mission-input"
+          name="objective"
+          rows="4"
+          placeholder="What needs to be accomplished?"
+          required
+        ></textarea>
+
+        <button type="submit" id="ranger-submit">
+          EXECUTE
+        </button>
+      </form>
+    </section>
+
+    <section>
+      <h3>Ranger Output</h3>
+      <pre id="ranger-output">Awaiting mission...</pre>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
