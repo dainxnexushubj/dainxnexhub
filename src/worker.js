@@ -18,7 +18,7 @@ function response(data, status = 200) {
 }
 
 export default {
-  async fetch(request) {
+  async fetch(request, env) {
     const url = new URL(request.url);
 
     if (request.method === "OPTIONS") {
@@ -87,14 +87,6 @@ export default {
       }
     }
 
-    return response(
-      {
-        success: false,
-        owner: RANGER_OWNER,
-        actor: RANGER_ACTOR,
-        error: "Ranger endpoint not found."
-      },
-      404
-    );
+    return env.ASSETS.fetch(request);
   }
 };
